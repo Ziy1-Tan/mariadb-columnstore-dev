@@ -56,3 +56,7 @@ rm -rf /etc/my.cnf.d/provider_*
 ```shell
 echo -e '[mysqld]\nplugin-load-add=ha_columnstore.so\ncolumnstore_use_import_for_batchinsert = ON\n\ncollation_server = utf8_general_ci\ncharacter_set_server = utf8' > /etc/my.cnf.d/columnstore.cnf
 ```
+
+- Run a single mariadb servive without systemd
+
+`/usr/bin/mariadbd-safe --datadir=/var/lib/mysql`
